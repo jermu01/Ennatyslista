@@ -1,9 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="data/stylesheet.xsl"?>
+<?xml version="1.0"?>
+<?xml-stylesheet href="stylesheet.xsl" type="text/xsl" ?>
 
 <information>
 <score>
     <nimi>axel</nimi>
     <pisteet>5</pisteet>
+</score>
+<score>
+    <nimi>Danny</nimi>
+    <pisteet>20</pisteet>
+</score>
+<score>
+    <nimi>Veikko</nimi>
+    <pisteet>50</pisteet>
 </score>
 </information>
