@@ -4,19 +4,19 @@
     overflow-x: hidden;
 }
 .game{
-    width: 800px;
+    width: 600px;
     height: 200px;
     border: 1px solid black;
     background-image: url(https://media.giphy.com/media/QdVskXUnrE1J6/giphy.gif);
     margin: left;
 }
 #character{
-    width: 55px;
+    width: 65px;
     position: relative;
-    top:160px;
+    top:150px;
 }
 .animate{
-    animation: jump 0.3s linear;
+    animation: jump 0.5s linear;
 }
 @keyframes jump{
     0%{top: 150px;}
@@ -26,11 +26,11 @@
 }
 
 #block{
-    width:30px;
+    width:20px;
     position: relative;
-    top: -26px;
-    left: 100px;
-    animation: block 1s infinite linear;
+    top: 130px;
+    left: 480px;
+    animation: block 3s infinite linear;
 }
 @keyframes block{
     0%{left: 500px}
