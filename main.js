@@ -16,7 +16,7 @@ var checkDead = setInterval(function() {
         block.style.animation = "none";
         block.style.display = "none";
         counter=0;
-        block.style.animation = "block 1s infinite linear";
+        block.style.animation = "block 3s infinite linear";
     }else{
         counter++;
         document.getElementById("scoreSpan").innerHTML = Math.floor(counter/100);
