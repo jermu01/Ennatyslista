@@ -16,7 +16,7 @@
     top:150px;
 }
 .animate{
-    animation: jump 0.5s linear;
+    animation: jump 0.3s linear;
 }
 @keyframes jump{
     0%{top: 150px;}
@@ -26,10 +26,11 @@
 }
 
 #block{
-    width:20px;
+    display: block;
+    width:22px;
     position: relative;
-    top: 130px;
-    left: 480px;
+    top: 125px;
+    left: 30px;
     animation: block 3s infinite linear;
 }
 @keyframes block{

@@ -1,4 +1,4 @@
-var character = document.createElement("character");
+var character = document.getElementById("character");
 var block = document.getElementById("block");
 var counter=0;
 function jump(){
@@ -14,8 +14,8 @@ var checkDead = setInterval(function() {
     var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
     if(blockLeft<20 && blockLeft>0 && characterTop>=130){
         block.style.animation = "none";
-        block.style.display = "none";
-        counter=0;
+       // block.style.display = "none";
+        clearInterval(checkDead);
     }else{
         counter++;
         document.getElementById("scoreSpan").innerHTML = Math.floor(counter/100);
