@@ -1,19 +1,22 @@
 <?php
 
-// tallennus
-function saveToDataXML($nimi, $pisteet){
-    $xml = simplexml_load_file('data/scores.xml');
+$taskName = $_GET['task_name'];
 
-    $nimi = $_GET['nimi'];
-    $pisteet = $_GET['pisteet'];
+$xml = simplexml_load_file('scores.xml');
 
-    $new_pic = addChild('nimi', $nimi)
-    $new_pic = addChild('pisteet', $pisteet)
+$newTask = $xml->addChild('scores');
+$newTask->addChild('name', $taskName);
+$newTask->addChild('score', $taskScore);
+$newTask->addAttribute('list', 'scorelist');
+
+
+//tallennus
+$dom = new DOMDocument("1.0");
+$dom->preserveWhiteSpace = false;
+$dom->formaOutput = true;
+$dom->loadXML($xml->asXML());
+$dom->save('scores.xml');
+
+header("Location: scorelist.php");
+
     
-    // DOM tallenne & muotoilu
-    $dom = new DOMDocument("1.0");
-    $dom->preserveWhiteSpace = false;
-    $dom->formaOutput = true;
-    $dom->loadXML($xml->asXML());
-    $dom->save('data/scores.xml');
-}

@@ -1,17 +1,8 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="stylesheet.xsl" type="text/xsl" ?>
-
 <information>
-<score>
-    <nimi>.</nimi>
-    <pisteet>.</pisteet>
-</score>
-<score>
-    <nimi>.</nimi>
-    <pisteet>.</pisteet>
-</score>
-<score>
-    <nimi>.</nimi>
-    <pisteet>.</pisteet>
-</score>
+<scores list="scorelist">
+    <name>olli</name>
+    <score>5</score>
+    </scores>
 </information>
