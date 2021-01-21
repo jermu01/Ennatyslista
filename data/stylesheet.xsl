@@ -3,7 +3,7 @@
     <xsl:template match="/information">
     <html>
     <body>
-    <table border="1">
+    <table border="5">
         <tr>
             <th>Nimi</th>
             <th>Pisteet</th>

@@ -1,12 +1,16 @@
 <?php
 
 $taskName = $_GET['task_name'];
+$taskScore = $_GET['task_score'];
+$scoreSpan = $_GET['scoreSpan'];
+
 
 $xml = simplexml_load_file('scores.xml');
 
 $newTask = $xml->addChild('scores');
 $newTask->addChild('name', $taskName);
 $newTask->addChild('score', $taskScore);
+$newTask->addChild('scoreSpan', $scoreSpan);
 $newTask->addAttribute('list', 'scorelist');
 
 
