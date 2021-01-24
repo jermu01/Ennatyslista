@@ -10,8 +10,8 @@
         </tr>
         <xsl:for-each select="score">
         <tr>
-            <td><xsl:value-of select="nimi"/></td>
-            <td><xsl:value-of select="pisteet"/></td>
+            <td><xsl:value-of select="name"/></td>
+            <td><xsl:value-of select="score"/></td>
         </tr>
         </xsl:for-each>
         </table>
