@@ -1,23 +1,21 @@
 <?php
 
-$taskName = $_GET['task_name'];
-$taskScore = $_GET['task_score'];
-$scoreSpan = $_GET['scoreSpan'];
+$player = $_GET['player'];
+$score = $_GET['score'];
 
 
 $xml = simplexml_load_file('scores.xml');
 
-$newTask = $xml->addChild('scores');
-$newTask->addChild('name', $taskName);
-$newTask->addChild('score', $taskScore);
-$newTask->addChild('scoreSpan', $scoreSpan);
-$newTask->addAttribute('list', 'scorelist');
+$newScore = $xml->addChild('scores');
+$newScore->addChild('name', $player);
+$newScore->addChild('score', $score);
+$newScore->addAttribute('list', 'scorelist');
 
 
 //tallennus
 $dom = new DOMDocument("1.0");
 $dom->preserveWhiteSpace = false;
-$dom->formaOutput = true;
+$dom->formatOutput = true;
 $dom->loadXML($xml->asXML());
 $dom->save('scores.xml');
 

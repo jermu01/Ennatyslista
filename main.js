@@ -12,10 +12,12 @@ setTimeout(function(){
 var checkDead = setInterval(function() {
     var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+    document.forms['game']['score'].value = Math.floor(counter/100);
     if(blockLeft<20 && blockLeft>0 && characterTop>=130){
         block.style.animation = "none";
         block.style.display = "none";
         clearInterval(checkDead);
+        document.getElementById("information").style.display="unset";
     }else{
         counter++;
         document.getElementById("scoreSpan").innerHTML = Math.floor(counter/100);

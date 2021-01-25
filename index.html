@@ -10,9 +10,11 @@
         <img id="character" src="img/character.png">
         <img id="block" src="img/block.png">
     </div>
-    <h1>Your name</h1>
-    <form action="data/SavePoints.php" method="get">
-        <input type="text" name="task_name">
+    
+    <form style="display: none;" action="data/SavePoints.php" name="game" id="information" method="get">
+        <h1>Your name</h1>
+        <input type="text" name="player">
+        <input type="hidden" name="score">
         <input type="submit" value="Save">
     </form>
     <p>Score: <span id="scoreSpan"></span></p>
